@@ -1,0 +1,248 @@
+@import './base.scss';
+
+/***** Community *****/
+.community-hero {
+  background-image: url('../settings/community_background_image.svg');
+  margin-bottom: 10px;
+}
+
+.community-footer {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.community-featured-posts, .community-activity {
+  padding-top: 40px;
+  width: 100%;
+}
+
+.community-header {
+  margin-bottom: 30px;
+}
+
+.community-header h4 {
+  margin-bottom: 0;
+}
+
+.post-to-community {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .post-to-community {
+    margin: 0;
+  }
+}
+
+/* Community topics grid */
+.topics {
+  max-width: none;
+  width: 100%;
+}
+
+.topics-item .meta-group {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Community topic page */
+.topic-header {
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .topic-header {
+    padding-bottom: 10px;
+  }
+}
+
+.topic-header .dropdown {
+  display: block;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .topic-header .dropdown {
+    border-top: 0;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 0;
+  }
+}
+
+.no-posts-with-filter {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Topic, post and user follow button */
+.community-follow {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .community-follow {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+.community-follow .dropdown {
+  width: 100%;
+}
+
+.community-follow [role="button"] {
+  line-height: 30px;
+  padding: 0 10px 0 15px;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .community-follow [role="button"] {
+    width: auto;
+  }
+}
+
+.community-follow [role="button"]:hover {
+  background-color: $color-primary;
+}
+
+.community-follow [role="button"]:hover::after, .community-follow [role="button"]:focus::after {
+  border-color: $color-text-on-dark;
+  color: $color-text-on-dark;
+}
+
+.community-follow [role="button"][aria-selected="true"] {
+  background-color: $color-primary;
+  color: $color-text-on-dark;
+}
+
+.community-follow [role="button"][aria-selected="true"]::after {
+  border-left: 1px solid $color-text-on-dark;
+  color: $color-text-on-dark;
+}
+
+.community-follow [role="button"][aria-selected="true"]:hover {
+  background-color: darken($color-primary, 20%);
+  border-color: darken($color-primary, 20%);
+}
+
+.community-follow [role="button"]::after {
+  border-left: 1px solid $color-primary;
+  content: attr(data-follower-count);
+  color: $color-primary;
+  display: inline-block;
+  font-family: inherit;
+  margin-left: 15px;
+  padding-left: 10px;
+  position: absolute;
+  right: 10px;
+}
+
+@media (min-width: 768px) {
+  .community-follow [role="button"]::after {
+    position: static;
+  }
+}
+
+[dir="rtl"] .community-follow [role="button"]::after {
+  border-left: 0;
+  border-right: 1px solid $color-primary;
+  margin: 0 10px 0 0;
+  padding: 0 10px 0 0;
+}
+
+/***** Striped list *****/
+/* Used in community posts list and requests list */
+.striped-list {
+  padding: 0;
+}
+
+.striped-list-item {
+  align-items: flex-start;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .striped-list-item {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.striped-list-info {
+  flex: 2;
+}
+
+.striped-list-title {
+  color: $color-link;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.striped-list-title:hover, .striped-list-title:focus, .striped-list-title:active {
+  text-decoration: underline;
+}
+
+.striped-list-title:visited {
+  color: darken($color-link, 20%);
+}
+
+.striped-list .meta-group {
+  margin: 5px 0;
+}
+
+.striped-list-count {
+  color: lighten($color-text-on-light, 20%);
+  font-weight: 300;
+  font-size: 13px;
+  justify-content: flex-start;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .striped-list-count {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+  }
+}
+
+.striped-list-count-item::after {
+  content: "·";
+  display: inline-block;
+  padding: 0 5px;
+}
+
+@media (min-width: 768px) {
+  .striped-list-count-item::after {
+    display: none;
+  }
+}
+
+.striped-list-count-item:last-child::after {
+  display: none;
+}
+
+.striped-list-number {
+  font-weight: 300;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .striped-list-number {
+    color: $color-text-on-light;
+    display: block;
+    font-weight: 400;
+  }
+}
+
+

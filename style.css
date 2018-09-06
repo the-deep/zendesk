@@ -1,0 +1,388 @@
+@charset "UTF-8";
+@import 'styles/base.css';
+@import 'styles/button.css';
+@import 'styles/table.css';
+@import 'styles/form.css';
+@import 'styles/home.css';
+@import 'styles/category.css';
+@import 'styles/articles.css';
+@import 'styles/attachments.css';
+@import 'styles/comments.css';
+@import 'styles/community.css';
+@import 'styles/social.css';
+@import 'styles/vote.css';
+@import 'styles/post.css';
+@import 'styles/myactivities.css';
+@import 'styles/userprofiles.css';
+@import 'styles/icons.css';
+@import 'styles/header.css';
+@import 'styles/pagination.css';
+@import 'styles/hero.css';
+@import 'styles/searchfield.css';
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400i,600,700');
+
+/***** Base *****/
+
+/***** Buttons *****/
+/***** Tables *****/
+/***** Forms *****/
+/***** Header *****/
+/***** User info in header *****/
+/***** User avatar *****/
+/***** Footer *****/
+
+/***** Breadcrumbs *****/
+.breadcrumbs {
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .breadcrumbs {
+    margin: 0;
+  }
+}
+
+.breadcrumbs li {
+  color: lighten($text_color, 20%);
+  display: inline;
+  font-weight: 300;
+  font-size: 13px;
+  max-width: 450px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.breadcrumbs li + li::before {
+  content: ">";
+  margin: 0 4px;
+}
+
+.breadcrumbs li a:visited {
+  color: $link_color;
+}
+
+/***** Search field *****/
+/***** Hero component *****/
+/***** Blocks *****/
+/***** Homepage *****/
+/***** Promoted articles *****/
+/***** Community section in homepage *****/
+/***** Recent activity *****/
+/***** Category pages *****/
+/***** Section pages *****/
+/***** Article *****/
+/***** Attachments *****/
+/***** Social share links *****/
+/***** Comments *****/
+/***** Vote *****/
+/***** Actions *****/
+
+/* Styles admin and en user actions(edit, delete, change status) in comments and posts */
+.actions {
+  text-align: center;
+  flex-shrink: 0;
+  /*Avoid collapsing elements in Safari*/
+}
+
+.actions .dropdown-toggle {
+  font-size: 0;
+  margin: 15px 0;
+}
+
+.actions .dropdown-toggle:hover::before, .actions .dropdown-toggle:focus::before, .actions .dropdown-toggle:active::before {
+  background-color: darken($background_color, 3%);
+}
+
+.actions .dropdown-toggle::before {
+  background-color: transparent;
+  border-radius: 50%;
+  color: lighten($text_color, 20%);
+  content: "\2699";
+  display: block;
+  font-size: 13px;
+  margin: auto;
+  padding: 5px;
+}
+
+/***** Community *****/
+/***** Striped list *****/
+/***** Status labels *****/
+
+/* Styles labels used in posts, articles and requests */
+.status-label {
+  background-color: #1eb848;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  margin-right: 2px;
+  padding: 3px 10px;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.status-label:hover, .status-label:active, .status-label:focus {
+  text-decoration: none;
+}
+
+.status-label-pinned, .status-label-featured, .status-label-official {
+  background-color: $brand_color;
+}
+
+.status-label-official {
+  border-radius: 0;
+  margin-right: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .status-label-official {
+    border-radius: 0 0 4px 4px;
+    right: 30px;
+    width: auto;
+  }
+}
+
+[dir="rtl"] .status-label-official {
+  left: 30px;
+  right: auto;
+}
+
+.status-label-pending, .status-label-not-planned {
+  background-color: #eee;
+  color: lighten($text_color, 20%);
+}
+
+.status-label-pending {
+  text-align: center;
+}
+
+.status-label-open {
+  background-color: #e03b30;
+}
+
+.status-label-closed {
+  background-color: #ddd;
+}
+
+.status-label-solved {
+  background-color: #999;
+}
+
+.status-label-new {
+  background-color: #ffd12a;
+}
+
+.status-label-hold {
+  background-color: #000;
+}
+
+.status-label-open, .status-label-closed, .status-label-solved, .status-label-new, .status-label-hold, .status-label-answered {
+  text-transform: lowercase;
+}
+
+/***** Post *****/
+
+/* Navigation element that collapses on mobile */
+.collapsible-nav {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  flex-direction: column;
+  max-height: 45px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .collapsible-nav {
+    border: 0;
+    height: auto;
+    flex-direction: row;
+    max-height: none;
+  }
+}
+
+.collapsible-nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .collapsible-nav-list {
+    flex-direction: row;
+  }
+}
+
+.collapsible-nav-list li {
+  color: $text_color;
+  line-height: 45px;
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .collapsible-nav-list li {
+    line-height: normal;
+    margin-right: 30px;
+  }
+  [dir="rtl"] .collapsible-nav-list li {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+  .collapsible-nav-list li a {
+    text-decoration: none;
+    padding: 15px 0;
+  }
+}
+
+.collapsible-nav-list li a {
+  color: $text_color;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .collapsible-nav-list li:hover {
+    border-bottom: 4px solid #ddd;
+  }
+  .collapsible-nav-list li:hover a {
+    padding: 15px 0 11px 0;
+    text-decoration: none;
+  }
+}
+
+.collapsible-nav-list li[aria-selected="true"] {
+  order: 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .collapsible-nav-list li[aria-selected="true"] {
+    border-bottom: 4px solid $brand_color;
+    order: 1;
+    padding: 15px 0 11px 0;
+  }
+}
+
+.collapsible-nav-list li[aria-selected="true"] a {
+  color: $text_color;
+}
+
+.collapsible-nav-list li[aria-selected="true"]::after {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\25BE";
+  position: absolute;
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .collapsible-nav-list li[aria-selected="true"]::after {
+    display: none;
+  }
+}
+
+[dir="rtl"] .collapsible-nav-list li[aria-selected="true"]::after {
+  left: 0;
+  right: auto;
+}
+
+.collapsible-nav[aria-expanded="true"] {
+  max-height: none;
+}
+
+.collapsible-nav[aria-expanded="true"] li[aria-selected="true"]::after {
+  content: "\2715";
+}
+
+/* Sidebar navigation that collapses on mobile */
+.collapsible-sidebar {
+  flex: 1;
+  max-height: 45px;
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .collapsible-sidebar {
+    max-height: none;
+    padding: 0;
+  }
+}
+
+.collapsible-sidebar[aria-expanded="true"] {
+  max-height: none;
+}
+
+.collapsible-sidebar[aria-expanded="true"] .collapsible-sidebar-title::after {
+  content: "\2715";
+}
+
+@media (min-width: 1024px) {
+  .collapsible-sidebar[aria-expanded="true"] .collapsible-sidebar-title::after {
+    display: none;
+  }
+}
+
+.collapsible-sidebar-title {
+  margin-top: 0;
+}
+
+.collapsible-sidebar-title::after {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\25BE";
+  position: absolute;
+  right: 10px;
+}
+
+@media (min-width: 1024px) {
+  .collapsible-sidebar-title::after {
+    display: none;
+  }
+}
+
+[dir="rtl"] .collapsible-sidebar-title::after {
+  left: 10px;
+  right: auto;
+}
+
+/***** My activities *****/
+/* Requests table */
+/* Following table */
+
+
+/* Contributions table */
+/***** Request *****/
+/***** Pagination *****/
+/***** Metadata *****/
+.meta-group {
+  display: block;
+}
+
+.meta-group * {
+  display: inline;
+}
+
+.meta-data {
+  color: lighten($text_color, 20%);
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.meta-data:not(:last-child)::after {
+  content: "\00B7";
+  margin: 0 5px;
+}
+
+/***** Icons *****/
+/* User Profiles */
+/***** Search results *****/
+

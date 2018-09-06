@@ -1,0 +1,54 @@
+@import './base.scss';
+
+.vote {
+  display: inline-block;
+  text-align: center;
+  width: 35px;
+}
+
+.vote a {
+  outline: none;
+}
+
+.vote a:active, .vote a:hover, .vote a:focus {
+  text-decoration: none;
+}
+
+.vote-sum {
+  color: lighten($color-text-on-light, 20%);
+  display: block;
+  margin: 3px 0;
+}
+
+[dir="rtl"] .vote-sum {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+.vote-up:hover::before,
+.vote-down:hover::before {
+  color: $color-primary;
+}
+
+.vote-up::before, .vote-down::before {
+  color: lighten($color-text-on-light, 20%);
+  font-size: 24px;
+}
+
+.vote-up::before {
+  content: "\2B06";
+}
+
+.vote-down::before {
+  content: "\2B07";
+}
+
+.vote-voted::before {
+  color: $color-primary;
+}
+
+.vote-voted:hover::before {
+  color: darken($color-primary, 20%);
+}
+
+
