@@ -4,14 +4,15 @@
   display: inline-block;
   text-align: center;
   width: 35px;
-}
+  a {
+      outline: none;
 
-.vote a {
-  outline: none;
-}
-
-.vote a:active, .vote a:hover, .vote a:focus {
-  text-decoration: none;
+      &:active,
+      &:hover,
+      &:focus {
+          text-decoration: none;
+      }
+  }
 }
 
 .vote-sum {
@@ -25,14 +26,18 @@
   unicode-bidi: bidi-override;
 }
 
-.vote-up:hover::before,
-.vote-down:hover::before {
-  color: $color-primary;
-}
+.vote-up,
+.vote-down {
+    &:hover {
+        &:before {
+            color: $color-primary;
+        }
+    }
 
-.vote-up::before, .vote-down::before {
-  color: lighten($color-text-on-light, 20%);
-  font-size: 24px;
+    &:before {
+        color: lighten($color-text-on-light, 20%);
+        font-size: 24px;
+    }
 }
 
 .vote-up::before {
@@ -43,12 +48,16 @@
   content: "\2B07";
 }
 
-.vote-voted::before {
-  color: $color-primary;
-}
+.vote-voted {
+    &:hover {
+        &:before {
+            color: darken($color-primary, 20%);
+        }
+    }
 
-.vote-voted:hover::before {
-  color: darken($color-primary, 20%);
-}
+    &:before {
+        color: $color-primary;
+    }
 
+}
 

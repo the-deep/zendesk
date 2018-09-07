@@ -120,44 +120,39 @@ ul {
 
 .form-field ~ .form-field {
   margin-top: 25px; }
-
 .form-field label {
   display: block;
   font-size: 13px;
   margin-bottom: 5px; }
-
 .form-field input {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 10px;
   width: 100%; }
-
-.form-field input:focus {
-  border: 1px solid #008975; }
-
-.form-field input[type="text"] {
-  border: 1px solid #ddd;
-  border-radius: 4px; }
-
-.form-field input[type="text"]:focus {
-  border: 1px solid #008975; }
-
-.form-field input[type="checkbox"] {
-  width: auto; }
-
-.form-field .nesty-input {
-  border-radius: 4px;
-  height: 40px;
-  line-height: 40px;
-  outline: none;
-  vertical-align: middle; }
-
-.form-field .nesty-input:focus {
-  border: 1px solid #008975;
-  text-decoration: none; }
-
-.form-field textarea {
-  vertical-align: middle; }
+  .form-field input:focus {
+    border: 1px solid #008975; }
+  .form-field input input[type="text"] {
+    border: 1px solid #ddd;
+    border-radius: 4px; }
+    .form-field input input[type="text"]:focus {
+      border: 1px solid #008975; }
+  .form-field input input[type="checkbox"] {
+    width: auto; }
+  .form-field input .nesty-input {
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    vertical-align: middle; }
+    .form-field input .nesty-input:focus {
+      border: 1px solid #008975;
+      text-decoration: none; }
+  .form-field input textarea {
+    vertical-align: middle; }
+  .form-field input p {
+    color: rgba(51, 51, 51, 0.8);
+    font-size: 12px;
+    margin: 5px 0; }
 
 .form-field input[type="checkbox"] + label {
   margin: 0 0 0 10px; }
@@ -167,11 +162,6 @@ ul {
   color: #f00;
   margin-left: 2px; }
 
-.form-field p {
-  color: rgba(51, 51, 51, 0.8);
-  font-size: 12px;
-  margin: 5px 0; }
-
 [data-loading="true"] input,
 [data-loading="true"] textarea {
   background: transparent url("../assets/dropdown-arrow.svg") 99% 50% no-repeat;
@@ -180,25 +170,20 @@ ul {
 .form footer {
   margin-top: 40px;
   padding-top: 30px; }
-
-.form footer a {
-  color: rgba(51, 51, 51, 0.8);
-  cursor: pointer;
-  margin-right: 15px; }
-
+  .form footer a {
+    color: rgba(51, 51, 51, 0.8);
+    cursor: pointer;
+    margin-right: 15px; }
 .form .suggestion-list {
   font-size: 13px;
   margin-top: 30px; }
-
-.form .suggestion-list label {
-  border-bottom: 1px solid #ddd;
-  display: block;
-  padding-bottom: 5px; }
-
-.form .suggestion-list li {
-  padding: 10px 0; }
-
-.form .suggestion-list li a:visited {
-  color: #0c4277; }
+  .form .suggestion-list label {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    padding-bottom: 5px; }
+  .form .suggestion-list li {
+    padding: 10px 0; }
+    .form .suggestion-list li a:visited {
+      color: #0c4277; }
 
 /*# sourceMappingURL=form.css.map */

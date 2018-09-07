@@ -4,18 +4,25 @@
 .pagination {
   margin: 20px 0;
   text-align: center;
+
+  li {
+      border-radius: 50%;
+      height: 40px;
+      float: left;
+      margin-left: 5px;
+      width: 40px;
+  }
+  a,
+  span {
+      font-size: 15px;
+      color: lighten($color-text-on-light, 20%);
+      padding: 10px 12px;
+  }
+
 }
 
 .pagination * {
   display: inline-block;
-}
-
-.pagination li {
-  border-radius: 50%;
-  height: 40px;
-  float: left;
-  margin-left: 5px;
-  width: 40px;
 }
 
 @media (min-width: 768px) {
@@ -38,12 +45,6 @@
   text-decoration: none;
 }
 
-.pagination a, .pagination span {
-  font-size: 15px;
-  color: lighten($color-text-on-light, 20%);
-  padding: 10px 12px;
-}
-
 @media (min-width: 768px) {
   .pagination a, .pagination span {
     font-size: 13px;
@@ -53,10 +54,11 @@
 
 .pagination-current {
   background-color: $color-primary;
-}
+  a,
+  span {
+      color: $color-text-on-light;
+  }
 
-.pagination-current a, .pagination-current span {
-  color: $color-text-on-light;
 }
 
 .pagination-first {

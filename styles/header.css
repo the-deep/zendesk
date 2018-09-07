@@ -172,25 +172,22 @@ ul {
   font-size: 14px;
   padding: 0 20px 0 0;
   width: auto; }
+  .nav-wrapper a:hover, .nav-wrapper a:focus, .nav-wrapper a:active {
+    background-color: transparent;
+    color: #1676d3;
+    text-decoration: underline; }
+  .nav-wrapper a .login {
+    display: inline-block; }
+.nav-wrapper .icon-menu {
+  display: inline-block;
+  margin-right: 10px;
+  color: #1676d3; }
 
 @media (min-width: 768px) {
   .nav-wrapper a {
     display: inline-block; } }
 [dir="rtl"] .nav-wrapper a {
   padding: 0 0 0 20px; }
-
-.nav-wrapper a:hover, .nav-wrapper a:focus, .nav-wrapper a:active {
-  background-color: transparent;
-  color: #1676d3;
-  text-decoration: underline; }
-
-.nav-wrapper a.login {
-  display: inline-block; }
-
-.nav-wrapper .icon-menu {
-  display: inline-block;
-  margin-right: 10px;
-  color: #1676d3; }
 
 @media (min-width: 768px) {
   .nav-wrapper .icon-menu {
@@ -202,9 +199,8 @@ ul {
 /***** User info in header *****/
 .user-info {
   display: inline-block; }
-
-.user-info .dropdown-toggle::after {
-  display: none; }
+  .user-info .dropdown-toggle::after {
+    display: none; }
 
 @media (min-width: 768px) {
   .user-info .dropdown-toggle::after {
@@ -249,24 +245,22 @@ ul {
 .avatar {
   display: inline-block;
   position: relative; }
-
-.avatar img {
-  height: 40px;
-  width: 40px; }
-
-.avatar .icon-agent::before {
-  background-color: #008975;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  bottom: -4px;
-  color: rgba(255, 255, 255, 0.8);
-  content: "\1F464";
-  font-size: 14px;
-  height: 14px;
-  line-height: 14px;
-  position: absolute;
-  right: -2px;
-  text-align: center;
-  width: 14px; }
+  .avatar img {
+    height: 40px;
+    width: 40px; }
+  .avatar .icon-agent::before {
+    background-color: #008975;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    bottom: -4px;
+    color: rgba(255, 255, 255, 0.8);
+    content: "\1F464";
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    position: absolute;
+    right: -2px;
+    text-align: center;
+    width: 14px; }
 
 /*# sourceMappingURL=header.css.map */

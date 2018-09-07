@@ -24,16 +24,26 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  .section {
+      flex: initial;
+  }
+
+  .icon-lock::before {
+      vertical-align: baseline;
+  }
+
+  .see-all-articles {
+      display: block;
+      padding: 15px 0;
+  }
+
 }
 
 @media (min-width: 768px) {
   .section-tree {
     flex-direction: row;
   }
-}
-
-.section-tree .section {
-  flex: initial;
 }
 
 @media (min-width: 768px) {
@@ -43,32 +53,25 @@
   }
 }
 
-.section-tree .icon-lock::before {
-  vertical-align: baseline;
-}
-
 .section-tree-title {
   margin-bottom: 0;
-}
 
-.section-tree-title a {
-  color: $color-text-on-light;
-  color: $color-primary;
-}
+  a {
+      color: $color-text-on-light;
+      color: $color-primary;
+  }
 
-.section-tree .see-all-articles {
-  display: block;
-  padding: 15px 0;
 }
 
 .article-list-item {
   border-bottom: 1px solid #ddd;
   font-size: 16px;
   padding: 15px 0;
-}
 
-.article-list-item a {
-  color: $color-text-on-light;
+  a {
+      color: $color-text-on-light;
+  }
+
 }
 
 .icon-star::before {

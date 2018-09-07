@@ -131,9 +131,8 @@ ul {
 
 .community-header {
   margin-bottom: 30px; }
-
-.community-header h4 {
-  margin-bottom: 0; }
+  .community-header h4 {
+    margin-bottom: 0; }
 
 .post-to-community {
   margin-top: 10px; }
@@ -154,15 +153,14 @@ ul {
 .topic-header {
   border-bottom: 1px solid #ddd;
   font-size: 13px; }
+  .topic-header .dropdown {
+    display: block;
+    border-top: 1px solid #ddd;
+    padding: 10px 0; }
 
 @media (min-width: 768px) {
   .topic-header {
     padding-bottom: 10px; } }
-.topic-header .dropdown {
-  display: block;
-  border-top: 1px solid #ddd;
-  padding: 10px 0; }
-
 @media (min-width: 768px) {
   .topic-header .dropdown {
     border-top: 0;
@@ -177,53 +175,48 @@ ul {
 .community-follow {
   margin-bottom: 10px;
   width: 100%; }
+  .community-follow .dropdown {
+    width: 100%; }
+  .community-follow [role="button"] {
+    line-height: 30px;
+    padding: 0 10px 0 15px;
+    position: relative;
+    width: 100%; }
+    .community-follow [role="button"]:hover {
+      background-color: #008975; }
+      .community-follow [role="button"]:hover:after {
+        border-color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 0.8); }
+    .community-follow [role="button"]:focus:after {
+      border-color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.8); }
+    .community-follow [role="button"]:after {
+      border-left: 1px solid #008975;
+      content: attr(data-follower-count);
+      color: #008975;
+      display: inline-block;
+      font-family: inherit;
+      margin-left: 15px;
+      padding-left: 10px;
+      position: absolute;
+      right: 10px; }
+  .community-follow [role="button"][aria-selected="true"] {
+    background-color: #008975;
+    color: rgba(255, 255, 255, 0.8); }
+    .community-follow [role="button"][aria-selected="true"]:after {
+      border-left: 1px solid rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.8); }
+    .community-follow [role="button"][aria-selected="true"]:hover {
+      background-color: #00231e;
+      border-color: #00231e; }
 
 @media (min-width: 768px) {
   .community-follow {
     margin-bottom: 0;
     width: auto; } }
-.community-follow .dropdown {
-  width: 100%; }
-
-.community-follow [role="button"] {
-  line-height: 30px;
-  padding: 0 10px 0 15px;
-  position: relative;
-  width: 100%; }
-
 @media (min-width: 768px) {
   .community-follow [role="button"] {
     width: auto; } }
-.community-follow [role="button"]:hover {
-  background-color: #008975; }
-
-.community-follow [role="button"]:hover::after, .community-follow [role="button"]:focus::after {
-  border-color: rgba(255, 255, 255, 0.8);
-  color: rgba(255, 255, 255, 0.8); }
-
-.community-follow [role="button"][aria-selected="true"] {
-  background-color: #008975;
-  color: rgba(255, 255, 255, 0.8); }
-
-.community-follow [role="button"][aria-selected="true"]::after {
-  border-left: 1px solid rgba(255, 255, 255, 0.8);
-  color: rgba(255, 255, 255, 0.8); }
-
-.community-follow [role="button"][aria-selected="true"]:hover {
-  background-color: #00231e;
-  border-color: #00231e; }
-
-.community-follow [role="button"]::after {
-  border-left: 1px solid #008975;
-  content: attr(data-follower-count);
-  color: #008975;
-  display: inline-block;
-  font-family: inherit;
-  margin-left: 15px;
-  padding-left: 10px;
-  position: absolute;
-  right: 10px; }
-
 @media (min-width: 768px) {
   .community-follow [role="button"]::after {
     position: static; } }
@@ -237,6 +230,8 @@ ul {
 /* Used in community posts list and requests list */
 .striped-list {
   padding: 0; }
+  .striped-list .meta-group {
+    margin: 5px 0; }
 
 .striped-list-item {
   align-items: flex-start;
@@ -257,15 +252,10 @@ ul {
   color: #1676d3;
   margin-bottom: 10px;
   margin-right: 5px; }
-
-.striped-list-title:hover, .striped-list-title:focus, .striped-list-title:active {
-  text-decoration: underline; }
-
-.striped-list-title:visited {
-  color: #0c4277; }
-
-.striped-list .meta-group {
-  margin: 5px 0; }
+  .striped-list-title:hover, .striped-list-title:focus, .striped-list-title:active {
+    text-decoration: underline; }
+  .striped-list-title:visited {
+    color: #0c4277; }
 
 .striped-list-count {
   color: rgba(51, 51, 51, 0.8);

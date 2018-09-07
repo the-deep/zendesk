@@ -3,34 +3,36 @@
 .share {
   padding: 0;
   white-space: nowrap;
-}
 
-.share li, .share a {
-  display: inline-block;
-}
+  li {
+      display: inline-block;
+  }
 
-.share a {
-  border-radius: 50%;
-  height: 25px;
-  line-height: 25px;
-  overflow: hidden;
-  width: 25px;
-}
+  a {
+      display: inline-block;
+      border-radius: 50%;
+      height: 25px;
+      line-height: 25px;
+      overflow: hidden;
+      width: 25px;
 
-.share a::before {
-  color: lighten($color-text-on-light, 20%);
-  display: block;
-  font-size: 23px;
-  text-align: center;
-  width: 100%;
-}
+      &:before {
+          color: lighten($color-text-on-light, 20%);
+          display: block;
+          font-size: 23px;
+          text-align: center;
+          width: 100%;
+      }
 
-.share a:hover {
-  text-decoration: none;
-}
+      &:hover {
+          text-decoration: none;
 
-.share a:hover::before {
-  color: $color-primary;
+          &:before {
+              color: $color-primary;
+          }
+      }
+  }
+
 }
 
 .share-twitter::before {

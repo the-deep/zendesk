@@ -131,23 +131,35 @@ ul {
   white-space: nowrap;
   width: 100%;
   -webkit-touch-callout: none; }
+  .button:after, [role="button"]:after {
+    color: #008975; }
 
 @media (min-width: 768px) {
   .button, [role="button"] {
     width: auto; } }
-.button::after, [role="button"]::after {
-  color: #008975; }
-
-.button:hover, .button:active, .button:focus, .button[aria-selected="true"], [role="button"]:hover, [role="button"]:active, [role="button"]:focus, [role="button"][aria-selected="true"] {
+.button:hover,
+.button:active,
+.button:focus,
+.button[aria-selected="true"],
+[role="button"]:hover,
+[role="button"]:active,
+[role="button"]:focus,
+[role="button"][aria-selected="true"] {
   background-color: #008975;
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none; }
 
-.button[aria-selected="true"]:hover, .button[aria-selected="true"]:focus, .button[aria-selected="true"]:active, [role="button"][aria-selected="true"]:hover, [role="button"][aria-selected="true"]:focus, [role="button"][aria-selected="true"]:active {
+.button[aria-selected="true"]:hover,
+.button[aria-selected="true"]:focus,
+.button[aria-selected="true"]:active,
+[role="button"][aria-selected="true"]:hover,
+[role="button"][aria-selected="true"]:focus,
+[role="button"][aria-selected="true"]:active {
   background-color: #00231e;
   border-color: #00231e; }
 
-.button[data-disabled], [role="button"][data-disabled] {
+.button[data-disabled],
+[role="button"][data-disabled] {
   cursor: default; }
 
 .button-large, input[type="submit"] {
@@ -165,20 +177,25 @@ ul {
 @media (min-width: 768px) {
   .button-large, input[type="submit"] {
     width: auto; } }
-.button-large:hover, .button-large:active, .button-large:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+.button-large:hover,
+.button-large:active,
+.button-large:focus,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus {
   background-color: #00231e; }
 
-.button-large[disabled], input[type="submit"][disabled] {
+.button-large[disabled],
+input[type="submit"][disabled] {
   background-color: #ddd; }
 
 .button-secondary {
   color: rgba(51, 51, 51, 0.8);
   border: 1px solid #ddd;
   background-color: transparent; }
-
-.button-secondary:hover, .button-secondary:focus, .button-secondary:active {
-  color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ddd;
-  background-color: #007a68; }
+  .button-secondary:hover, .button-secondary:focus, .button-secondary:active {
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    background-color: #007a68; }
 
 /*# sourceMappingURL=button.css.map */

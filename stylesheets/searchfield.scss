@@ -2,40 +2,40 @@
 
 .search {
   position: relative;
-}
 
-.search input[type="search"] {
-  border: 1px solid #ddd;
-  border-radius: 30px;
-  box-sizing: border-box;
-  color: #999;
-  height: 40px;
-  padding-left: 40px;
-  padding-right: 20px;
-  -webkit-appearance: none;
-  width: 100%;
+  input[type="search"] {
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      box-sizing: border-box;
+      color: #999;
+      height: 40px;
+      padding-left: 40px;
+      padding-right: 20px;
+      -webkit-appearance: none;
+      width: 100%;
+
+      &:focus {
+          border: 1px solid $color-primary;
+          color: #555;
+      }
+
+      &:before {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #fff;
+          color: #ddd;
+          content: "\1F50D";
+          font-size: 18px;
+          position: absolute;
+          left: 15px;
+      }
+  }
 }
 
 [dir="rtl"] .search input[type="search"] {
   padding-right: 40px;
   padding-left: 20px;
-}
-
-.search input[type="search"]:focus {
-  border: 1px solid $color-primary;
-  color: #555;
-}
-
-.search::before {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #fff;
-  color: #ddd;
-  content: "\1F50D";
-  font-size: 18px;
-  position: absolute;
-  left: 15px;
 }
 
 [dir="rtl"] .search::before {

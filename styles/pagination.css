@@ -119,16 +119,20 @@ ul {
 .pagination {
   margin: 20px 0;
   text-align: center; }
+  .pagination li {
+    border-radius: 50%;
+    height: 40px;
+    float: left;
+    margin-left: 5px;
+    width: 40px; }
+  .pagination a,
+  .pagination span {
+    font-size: 15px;
+    color: rgba(51, 51, 51, 0.8);
+    padding: 10px 12px; }
 
 .pagination * {
   display: inline-block; }
-
-.pagination li {
-  border-radius: 50%;
-  height: 40px;
-  float: left;
-  margin-left: 5px;
-  width: 40px; }
 
 @media (min-width: 768px) {
   .pagination li {
@@ -144,20 +148,15 @@ ul {
   color: rgba(0, 0, 0, 0.8);
   text-decoration: none; }
 
-.pagination a, .pagination span {
-  font-size: 15px;
-  color: rgba(51, 51, 51, 0.8);
-  padding: 10px 12px; }
-
 @media (min-width: 768px) {
   .pagination a, .pagination span {
     font-size: 13px;
     padding: 5px 12px; } }
 .pagination-current {
   background-color: #008975; }
-
-.pagination-current a, .pagination-current span {
-  color: rgba(0, 0, 0, 0.8); }
+  .pagination-current a,
+  .pagination-current span {
+    color: rgba(0, 0, 0, 0.8); }
 
 .pagination-first {
   border-radius: 3px 0 0 3px; }

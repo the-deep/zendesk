@@ -16,6 +16,10 @@
   white-space: nowrap;
   width: 100%;
   -webkit-touch-callout: none;
+
+  &:after {
+      color: $color-primary;
+  }
 }
 
 @media (min-width: 768px) {
@@ -24,22 +28,31 @@
   }
 }
 
-.button::after, [role="button"]::after {
-  color: $color-primary;
-}
-
-.button:hover, .button:active, .button:focus, .button[aria-selected="true"], [role="button"]:hover, [role="button"]:active, [role="button"]:focus, [role="button"][aria-selected="true"] {
+.button:hover,
+.button:active,
+.button:focus, 
+.button[aria-selected="true"],
+[role="button"]:hover,
+[role="button"]:active,
+[role="button"]:focus,
+[role="button"][aria-selected="true"] {
   background-color: $color-primary;
   color: $color-text-on-dark;
   text-decoration: none;
 }
 
-.button[aria-selected="true"]:hover, .button[aria-selected="true"]:focus, .button[aria-selected="true"]:active, [role="button"][aria-selected="true"]:hover, [role="button"][aria-selected="true"]:focus, [role="button"][aria-selected="true"]:active {
+.button[aria-selected="true"]:hover,
+.button[aria-selected="true"]:focus,
+.button[aria-selected="true"]:active,
+[role="button"][aria-selected="true"]:hover,
+[role="button"][aria-selected="true"]:focus,
+[role="button"][aria-selected="true"]:active {
   background-color: darken($color-primary, 20%);
   border-color: darken($color-primary, 20%);
 }
 
-.button[data-disabled], [role="button"][data-disabled] {
+.button[data-disabled],
+[role="button"][data-disabled] {
   cursor: default;
 }
 
@@ -62,11 +75,17 @@
   }
 }
 
-.button-large:hover, .button-large:active, .button-large:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+.button-large:hover,
+.button-large:active,
+.button-large:focus,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus {
   background-color: darken($color-primary, 20%);
 }
 
-.button-large[disabled], input[type="submit"][disabled] {
+.button-large[disabled],
+input[type="submit"][disabled] {
   background-color: #ddd;
 }
 
@@ -74,12 +93,13 @@
   color: lighten($color-text-on-light, 20%);
   border: 1px solid #ddd;
   background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+      color: $color-text-on-dark;
+      border: 1px solid #ddd;
+      background-color: darken($color-primary, 3%);
+  }
+
 }
-
-.button-secondary:hover, .button-secondary:focus, .button-secondary:active {
-  color: $color-text-on-dark;
-  border: 1px solid #ddd;
-  background-color: darken($color-primary, 3%);
-}
-
-

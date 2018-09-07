@@ -40,7 +40,8 @@
   margin-top: 15px;
 }
 
-.search-result-votes, .search-result-meta-count {
+.search-result-votes,
+.search-result-meta-count {
   color: lighten($color-text-on-light, 20%);
   display: inline-block;
   font-size: 13px;
@@ -83,10 +84,10 @@
 
 .search-result-breadcrumbs {
   margin: 0;
-}
 
-.search-result-breadcrumbs li:last-child::after {
-  content: "·";
-  display: inline-block;
-  margin: 0 5px;
+  li:last-child::after {
+      content: "·";
+      display: inline-block;
+      margin: 0 5px;
+  }
 }

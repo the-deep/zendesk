@@ -119,12 +119,10 @@ ul {
   display: inline-block;
   text-align: center;
   width: 35px; }
-
-.vote a {
-  outline: none; }
-
-.vote a:active, .vote a:hover, .vote a:focus {
-  text-decoration: none; }
+  .vote a {
+    outline: none; }
+    .vote a:active, .vote a:hover, .vote a:focus {
+      text-decoration: none; }
 
 .vote-sum {
   color: rgba(51, 51, 51, 0.8);
@@ -135,11 +133,11 @@ ul {
   direction: ltr;
   unicode-bidi: bidi-override; }
 
-.vote-up:hover::before,
-.vote-down:hover::before {
+.vote-up:hover:before,
+.vote-down:hover:before {
   color: #008975; }
-
-.vote-up::before, .vote-down::before {
+.vote-up:before,
+.vote-down:before {
   color: rgba(51, 51, 51, 0.8);
   font-size: 24px; }
 
@@ -149,10 +147,9 @@ ul {
 .vote-down::before {
   content: "\2B07"; }
 
-.vote-voted::before {
-  color: #008975; }
-
-.vote-voted:hover::before {
+.vote-voted:hover:before {
   color: #00231e; }
+.vote-voted:before {
+  color: #008975; }
 
 /*# sourceMappingURL=vote.css.map */

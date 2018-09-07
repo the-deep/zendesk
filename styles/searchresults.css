@@ -144,7 +144,8 @@ ul {
 .search-result-description {
   margin-top: 15px; }
 
-.search-result-votes, .search-result-meta-count {
+.search-result-votes,
+.search-result-meta-count {
   color: rgba(51, 51, 51, 0.8);
   display: inline-block;
   font-size: 13px;
@@ -178,10 +179,9 @@ ul {
 
 .search-result-breadcrumbs {
   margin: 0; }
-
-.search-result-breadcrumbs li:last-child::after {
-  content: "·";
-  display: inline-block;
-  margin: 0 5px; }
+  .search-result-breadcrumbs li:last-child::after {
+    content: "·";
+    display: inline-block;
+    margin: 0 5px; }
 
 /*# sourceMappingURL=searchresults.css.map */

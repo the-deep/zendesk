@@ -142,26 +142,24 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 10px; }
+  .post-header .status-label {
+    vertical-align: super; }
 
 @media (min-width: 768px) {
   .post-header {
     align-items: baseline;
     flex-direction: row; } }
-.post-header .status-label {
-  vertical-align: super; }
-
 .post-title {
   margin-bottom: 20px;
   width: 100%; }
+  .post-title h1 {
+    display: inline;
+    vertical-align: middle; }
 
 @media (min-width: 768px) {
   .post-title {
     margin-bottom: 0;
     padding-right: 10px; } }
-.post-title h1 {
-  display: inline;
-  vertical-align: middle; }
-
 @media (min-width: 768px) {
   .post-title h1 {
     margin-right: 5px; } }
@@ -204,34 +202,20 @@ ul {
 .post-body img {
   height: auto;
   max-width: 100%; }
-
-.post-body ul, .post-body ol {
-  padding-left: 20px;
-  list-style-position: outside;
-  margin: 20px 0 20px 20px; }
-
-[dir="rtl"] .post-body ul, [dir="rtl"] .post-body ol {
-  padding-right: 20px;
-  padding-left: 0;
-  margin-left: 0;
-  margin-right: 20px; }
-
-.post-body ul > ul, .post-body ol > ol, .post-body ol > ul, .post-body ul > ol, .post-body li > ul, .post-body li > ol {
-  margin: 0; }
-
 .post-body ul {
   list-style-type: disc; }
-
+  .post-body ul ol {
+    padding-left: 20px;
+    list-style-position: outside;
+    margin: 20px 0 20px 20px; }
 .post-body a:visited {
   color: #0c4277; }
-
 .post-body code {
   background: #ececec;
   border: 1px solid #ddd;
   border-radius: 3px;
   padding: 0 5px;
   margin: 0 2px; }
-
 .post-body pre {
   background: #ececec;
   border: 1px solid #ddd;
@@ -239,12 +223,25 @@ ul {
   padding: 10px 15px;
   overflow: auto;
   white-space: pre; }
-
 .post-body blockquote {
   border-left: 1px solid #ddd;
   color: rgba(51, 51, 51, 0.8);
   font-style: italic;
   padding: 0 15px; }
+
+[dir="rtl"] .post-body ul, [dir="rtl"] .post-body ol {
+  padding-right: 20px;
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: 20px; }
+
+.post-body ul > ul,
+.post-body ol > ol,
+.post-body ol > ul,
+.post-body ul > ol,
+.post-body li > ul,
+.post-body li > ol {
+  margin: 0; }
 
 .post-footer {
   align-items: center;
@@ -255,22 +252,22 @@ ul {
 .post-comment-count {
   color: rgba(51, 51, 51, 0.8);
   font-weight: 300; }
-
-.post-comment-count:hover {
-  text-decoration: none; }
-
-.post-comment-count .icon-comments {
-  color: #008975;
-  content: "\1F4AC";
-  display: inline-block;
-  font-size: 18px;
-  padding: 5px; }
+  .post-comment-count:hover {
+    text-decoration: none; }
+  .post-comment-count .icon-comments {
+    color: #008975;
+    content: "\1F4AC";
+    display: inline-block;
+    font-size: 18px;
+    padding: 5px; }
 
 .post-sidebar {
   border-top: 1px solid #ddd;
   flex: 1;
   padding: 30px 0;
   text-align: center; }
+  .post-sidebar h5 {
+    font-weight: 600; }
 
 @media (min-width: 1024px) {
   .post-sidebar {
@@ -281,9 +278,6 @@ ul {
 
   [dir="rtl"] .post-sidebar {
     padding: 0 50px 0 0; } }
-.post-sidebar h5 {
-  font-weight: 600; }
-
 @media (min-width: 1024px) {
   .post-sidebar h5 {
     border-bottom: 1px solid #ddd;
