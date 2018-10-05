@@ -123,61 +123,10 @@ ul {
 .category-content {
   flex: 1;
   color: #008975;
-  text-transform: uppercase;
   font-weight: 500; }
 
 @media (min-width: 1024px) {
   .category-content {
     flex: 0 0 80%; } }
-.section-tree {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  .section-tree .section {
-    flex: initial; }
-  .section-tree .icon-lock::before {
-    vertical-align: baseline; }
-  .section-tree .see-all-articles {
-    display: block;
-    padding: 15px 0; }
-
-@media (min-width: 768px) {
-  .section-tree {
-    flex-direction: row; } }
-@media (min-width: 768px) {
-  .section-tree .section {
-    flex: 0 0 45%;
-    /* Two columns for tablet and desktop. Leaving 5% separation between columns */ } }
-.section-tree-title {
-  margin-bottom: 0; }
-  .section-tree-title a {
-    color: rgba(0, 0, 0, 0.8);
-    color: #008975; }
-
-.article-list-item {
-  border-bottom: 1px solid #ddd;
-  font-size: 16px;
-  padding: 15px 0; }
-  .article-list-item a {
-    color: rgba(0, 0, 0, 0.8); }
-
-.icon-star::before {
-  color: #008975;
-  font-size: 18px; }
-
-/***** Section pages *****/
-.section-container {
-  display: flex;
-  justify-content: flex-end; }
-
-.section-content {
-  flex: 1; }
-
-@media (min-width: 1024px) {
-  .section-content {
-    flex: 0 0 80%; } }
-.section-subscribe .dropdown-toggle::after {
-  display: none; }
 
 /*# sourceMappingURL=category.css.map */

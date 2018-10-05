@@ -5,6 +5,7 @@
 @import 'styles/form.css';
 @import 'styles/home.css';
 @import 'styles/category.css';
+@import 'styles/section.css';
 @import 'styles/articles.css';
 @import 'styles/attachments.css';
 @import 'styles/comments.css';
@@ -19,6 +20,7 @@
 @import 'styles/header.css';
 @import 'styles/pagination.css';
 @import 'styles/searchfield.css';
+@import 'styles/footer.css';
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400i,600,700');
 

@@ -1,7 +1,10 @@
 <footer class="footer">
   <div class="footer-inner">
+    <div class="logo">
+      {{#link 'help_center'}}
+        <img src="{{settings.logo}}" alt="{{t 'logo'}}">
+      {{/link}}
     {{#link 'help_center'}}{{help_center.name}}{{/link}}
-
     <div class="footer-language-selector">
       {{#if alternative_locales}}
         <div class="dropdown language-selector" aria-haspopup="true">
@@ -11,12 +14,22 @@
           <span class="dropdown-menu dropdown-menu-end" role="menu">
             {{#each alternative_locales}}
               <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
-                {{name}}
+                {{name}} 
               </a>
             {{/each}}
           </span>
         </div>
       {{/if}}
+    </div>
+    </div>
+    <div class="group">
+      <p>Join the DEEP community</p>
+      <a href="https://goo.gl/13pcuA">
+        <img class="logo" src="{{asset 'slack.png'}}" />
+      </a>
+      <a href="https://join.skype.com/idYxL8ozLDOD">
+        <img class="logo" src="{{asset 'skype.png'}}" />
+      </a>
     </div>
   </div>
 </footer>

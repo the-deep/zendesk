@@ -342,6 +342,7 @@
   background-color: $color-primary;
   color: $color-text-on-dark;
   text-decoration: none;
+  font-weight: 550;
 
   &:hover {
       background-color: darken($color-primary, 20%);
@@ -359,7 +360,6 @@
   border-radius: 4px;
   color: $color-text-on-light;
   display: block;
-  font-weight: 300;
   margin-bottom: 10px;
   padding: 10px;
 }
@@ -368,6 +368,7 @@
   background-color: $color-primary;
   color: $color-text-on-dark;
   text-decoration: none;
+  font-weight: 550;
 }
 
 .recent-articles h3,

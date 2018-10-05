@@ -354,7 +354,8 @@ ul {
 .article-unsubscribe {
   background-color: #008975;
   color: rgba(255, 255, 255, 0.8);
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: 550; }
   .article-unsubscribe:hover {
     background-color: #00231e;
     border-color: #00231e; }
@@ -367,14 +368,14 @@ ul {
   border-radius: 4px;
   color: rgba(0, 0, 0, 0.8);
   display: block;
-  font-weight: 300;
   margin-bottom: 10px;
   padding: 10px; }
 
 .sidenav-item.current-article, .sidenav-item:hover {
   background-color: #008975;
   color: rgba(255, 255, 255, 0.8);
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: 550; }
 
 .recent-articles h3,
 .related-articles h3 {
