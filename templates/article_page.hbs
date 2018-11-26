@@ -11,9 +11,13 @@
         <h3 class="collapsible-sidebar-title sidenav-title">{{t 'articles_in_section'}}</h3>
         <ul>
           {{#each section.articles}}
-            <li>
-              <a href="{{url}}" class="sidenav-item {{#is id ../article.id}}current-article{{/is}}">{{title}}</a>
-            </li>
+            {{#isnt title "Quotes"}}
+            {{#isnt title "Key Points"}}
+              <li>
+                <a href="{{url}}" class="sidenav-item {{#is id ../article.id}}current-article{{/is}}">{{title}}</a>
+              </li>
+            {{/isnt}}
+            {{/isnt}}
           {{/each}}
         </ul>
         {{#if section.more_articles}}
@@ -206,5 +210,25 @@
         </section>
       </div>
     </article>
+    <section class="side-bar">
+      {{#each section.articles}}
+        {{#is title "Quotes"}}
+          <h3>
+            Quotes
+          </h3>
+          <div class="quotes">
+            {{ body }}
+          </div>
+        {{/is}}
+        {{#is title "Key Points"}}
+          <h3>
+            Key Points
+          </h3>
+          <div class="key-points">
+            {{ body }}
+          </div>
+        {{/is}}
+      {{/each}}
+    </section>
   </div>
 </div>

@@ -3,16 +3,16 @@
 .article {
   /*
   * The article grid is defined this way to optimize readability:
-  * Sidebar | Content | Free space
-  * 17%     | 66%     | 17%
+  * Sidebar | Content | Side bar
+  * 17%     | 58%     | Remaining%
   */
   flex: 1 0 auto;
 }
 
 @media (min-width: 1024px) {
   .article {
-    flex: 1 0 66%;
-    max-width: 66%;
+    flex: 1 0 58%;
+    max-width: 58%;
     min-width: 640px;
     padding: 0 30px;
   }
@@ -464,10 +464,7 @@
           &:before {
               color: $color-primary;
           }
-
       }
-
-
   }
 
 }
@@ -488,4 +485,9 @@
   content: "\e902";
 }
 
-
+/*
+ * To change side bar width, change the main content width instead.
+ * To do that change the width and flex values of .article at the top
+ * of this scss file.
+ */
+.side-bar {}
