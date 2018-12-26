@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
@@ -116,10 +116,10 @@ ul {
   color: inherit; }
 
 .hero {
-  background-image: url("../settings/homepage_background_image.svg");
+  background-image: url("../settings/homepage_background_image.png");
   background-position: center;
   background-size: cover;
-  height: 300px;
+  height: 92vh;
   padding: 0 20px;
   text-align: center;
   width: 100%; }

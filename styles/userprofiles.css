@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
@@ -117,7 +117,7 @@ ul {
 
 .profile-header {
   padding: 30px 0;
-  background-color: #ececec; }
+  background-color: #f7f7f7; }
   .profile-header .container {
     display: flex;
     flex-wrap: wrap; }
@@ -295,7 +295,7 @@ ul {
   .profile-private-badge {
     flex-basis: auto; } }
 .profile-nav {
-  background-color: #e7e7e7;
+  background-color: #f2f2f2;
   border: 0;
   margin-bottom: 37px; }
 
@@ -459,7 +459,7 @@ ul {
     content: "";
     background-size: 14px 14px;
     background-repeat: no-repeat;
-    background-color: #f4f4f4;
+    background-color: #fff;
     background-position: 50% 50%;
     text-align: center;
     line-height: 40px;
@@ -531,7 +531,7 @@ ul {
   padding: 20px;
   margin-top: 10px;
   border-radius: 8px;
-  background-color: #ececec; }
+  background-color: #f7f7f7; }
 
 @media (min-width: 768px) {
   .profile-activity-contribution {

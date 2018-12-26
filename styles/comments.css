@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15px;
@@ -264,13 +264,13 @@ ul {
   .comment-body a:visited {
     color: #0c4277; }
   .comment-body code {
-    background: #ececec;
+    background: #f7f7f7;
     border: 1px solid #ddd;
     border-radius: 3px;
     padding: 0 5px;
     margin: 0 2px; }
   .comment-body pre {
-    background: #ececec;
+    background: #f7f7f7;
     border: 1px solid #ddd;
     border-radius: 3px;
     padding: 10px 15px;

@@ -15,10 +15,10 @@
 }
 
 .blocks-item {
-    border: 1px solid $color-primary;
+    border: 1px solid rgba(0,0,0,0.3);
     border-radius: 4px;
     box-sizing: border-box;
-    color: $color-primary;
+    color: rgba(0,0,0,0.8);
     display: flex;
     flex: 1 0 340px;
     flex-direction: column;
@@ -30,9 +30,10 @@
     &:hover,
     &:active,
     &:focus {
-        background-color: $color-primary;
-        color: $color-text-on-dark;
         text-decoration: none;
+        transform: translateY(-1px);
+        transition: .2s all ease-in-out;
+        box-shadow: 0 2px 5px -1px rgba(0,0,0,0.3);
 
         * {
             background-color: inherit;
@@ -66,23 +67,28 @@
 
 }
 
+.blocks-item-title {
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
 .blocks-item-link {
-    color: $color-primary;
+    color: rgba(0,0,0,0.7);
     padding: 20px 30px;
 
     &:hover,
     &:focus,
     &:active {
         text-decoration: none;
+
+        .blocks-item-title {
+            color: $color-primary;
+        }
     }
 
 }
 
-.blocks-item-title {
-    font-weight: 600;
-    margin-bottom: 0;
-    text-transform: uppercase;
-}
 
 .blocks-item-description {
     font-weight: 400;
