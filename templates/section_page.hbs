@@ -19,8 +19,6 @@
           <p class="page-header-description">{{section.description}}</p>
         {{/if}}
       </header>
-
-
       {{#if section.articles}}
         <ul class="article-list">
           {{#each section.articles}}
@@ -37,7 +35,6 @@
           <a href="{{section.url}}">{{t 'empty'}}</a>
         </i>
       {{/if}}
-
       {{pagination}}
     </section>
   </div>

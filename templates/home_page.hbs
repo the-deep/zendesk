@@ -1,12 +1,27 @@
 <section class="section hero">
   <div class="hero-inner">
-    {{search submit=false instant=true class='search search-full'}}
+    <img src="{{settings.logo}}" class="deep-logo" />
+    <div class="left-container">
+      <h1 class="heading">
+        Welcome to
+        <span class="focus">
+          DEEP
+        </span>
+      </h1>
+      <h3 class="sub-heading">
+        Hi, how can we help you?
+      </h3>
+      {{search submit=false instant=true class='search search-full'}}
+    </div>
   </div>
 </section>
 
 <div class="container">
   <section class="section knowledge-base">
     <section class="categories blocks">
+      <h1 class="block-heading">
+        Browse
+      </h1>
       <ul class="blocks-list">
         {{#each categories}}
           {{#if ../has_multiple_categories}}
@@ -35,13 +50,15 @@
       </ul>
       {{pagination}}
     </section>
+  </section>
 
+  <div class="bottom-container">
     {{#if promoted_articles}}
-      <section class="articles">
-        <h3>{{t 'promoted_articles'}}</h3>
-        <ul class="article-list promoted-articles">
+      <section class="articles-home">
+        <h1>{{t 'promoted_articles'}}</h1>
+        <ul class="article-list promoted-articles-home">
           {{#each promoted_articles}}
-            <li class="promoted-articles-item">
+            <li class="promoted-articles-item-home">
               <a href="{{url}}">
                 {{title}}
               </a>
@@ -50,20 +67,17 @@
         </ul>
       </section>
     {{/if}}
-  </section>
-
+    <section class="section activity">
+      {{recent_activity}}
+    </section>
+  </div>
   {{#if help_center.community_enabled}}
     <section class="section community">
-      <h2>{{t 'community'}}</h2>
+      <h1>{{t 'community'}}</h1>
       {{#link 'community' class='community-link'}}
         {{t 'join_conversation'}}
       {{/link}}
-
-      <div class="community-image"></div>
+      <div class="community-image" />
     </section>
   {{/if}}
-
-  <section class="section activity">
-    {{recent_activity}}
-  </section>
 </div>

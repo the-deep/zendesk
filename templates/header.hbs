@@ -1,14 +1,10 @@
 <header class="header">
-  <div class="header-left-container">
-    <div class="logo">
-      {{#link 'help_center'}}
-        <img src="{{settings.logo}}" alt="{{t 'logo'}}">
-      {{/link}}
+  {{#link 'help_center'}}
+    <div class="header-left-container">
+      <img src="{{settings.logo}}" alt="{{t 'logo'}}">
+      <p class="title">DEEP</p>
     </div>
-    	{{#link 'help_center'}}
-    <p class="title">DEEP</p>
-    	{{/link}}
-  </div>
+  {{/link}}
   <div class="nav-wrapper">
     <span class="icon-menu"></span>
     <nav class="user-nav" id="user-nav">

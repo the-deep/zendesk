@@ -117,10 +117,10 @@ ul {
 
 .article {
   /*
-  * The article grid is defined this way to optimize readability:
-  * Sidebar | Content | Side bar
-  * 17%     | 58%     | Remaining%
-  */
+   * The article grid is defined this way to optimize readability:
+   * Sidebar | Content | Side bar
+   * 17%     | 58%     | Remaining%
+   */
   flex: 1 0 auto; }
 
 @media (min-width: 1024px) {
@@ -254,8 +254,7 @@ ul {
     padding: 5px; }
 
 .article-sidebar {
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+  border: 1px solid #414141;
   flex: 1 0 auto;
   margin-bottom: 20px;
   padding: 0; }
@@ -305,9 +304,9 @@ ul {
   .article-vote:hover {
     color: #008975; }
     .article-vote:hover:before {
-      color: #008975; }
+      color: #fff; }
     .article-vote:hover:after {
-      color: #008975; }
+      color: #fff; }
   .article-vote:focus {
     background-color: transparent;
     color: #008975; }
@@ -365,17 +364,18 @@ ul {
   position: relative; }
 
 .sidenav-item {
-  border-radius: 4px;
+  border-left: 4px solid transparent;
   color: rgba(0, 0, 0, 0.8);
   display: block;
-  margin-bottom: 10px;
-  padding: 10px; }
-
-.sidenav-item.current-article, .sidenav-item:hover {
-  background-color: #008975;
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  font-weight: 550; }
+  padding: 10px;
+  transition: .2s all ease-in-out; }
+  .sidenav-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none; }
+  .sidenav-item.current-article {
+    border-left: 4px solid #008975;
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none; }
 
 .recent-articles h3,
 .related-articles h3 {

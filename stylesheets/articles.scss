@@ -2,10 +2,10 @@
 
 .article {
   /*
-  * The article grid is defined this way to optimize readability:
-  * Sidebar | Content | Side bar
-  * 17%     | 58%     | Remaining%
-  */
+   * The article grid is defined this way to optimize readability:
+   * Sidebar | Content | Side bar
+   * 17%     | 58%     | Remaining%
+   */
   flex: 1 0 auto;
 }
 
@@ -88,52 +88,51 @@
 }
 
 .article-body {
-    img {
-        height: auto;
-        max-width: 100%;
-    }
+  img {
+    height: auto;
+    max-width: 100%;
+  }
 
-    ul {
-        padding-left: 20px;
-        list-style-type: disc;
-        list-style-position: outside;
-        margin: 20px 0 20px 20px;
-    }
+  ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin: 20px 0 20px 20px;
+  }
 
-    ol {
-        padding-left: 20px;
-        list-style-position: outside;
-        margin: 20px 0 20px 20px;
-    }
+  ol {
+    padding-left: 20px;
+    list-style-position: outside;
+    margin: 20px 0 20px 20px;
+  }
 
-    a:visited {
-        color: darken($color-link, 20%);
-    }
+  a:visited {
+    color: darken($color-link, 20%);
+  }
 
-    code {
-        background: darken($color-background-light, 3%);
-        border: 1px solid #ddd;
-        border-radius: 3px;
-        padding: 0 5px;
-        margin: 0 2px;
-    }
+  code {
+    background: darken($color-background-light, 3%);
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0 5px;
+    margin: 0 2px;
+  }
 
-    pre {
-        background: darken($color-background-light, 3%);
-        border: 1px solid #ddd;
-        border-radius: 3px;
-        padding: 10px 15px;
-        overflow: auto;
-        white-space: pre;
-    }
+  pre {
+    background: darken($color-background-light, 3%);
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px 15px;
+    overflow: auto;
+    white-space: pre;
+  }
 
-    blockquote {
-        border-left: 1px solid #ddd;
-        color: lighten($color-text-on-light, 20%);
-        font-style: italic;
-        padding: 0 15px;
-    }
-
+  blockquote {
+    border-left: 1px solid #ddd;
+    color: lighten($color-text-on-light, 20%);
+    font-style: italic;
+    padding: 0 15px;
+  }
 }
 
 [dir="rtl"] .article-body ul,
@@ -175,22 +174,21 @@
   font-weight: 300;
 
   &:hover {
-      text-decoration: none;
+    text-decoration: none;
   }
 
   .icon-comments {
-      color: $color-primary;
-      content: "\1F4AC";
-      display: inline-block;
-      font-size: 18px;
-      padding: 5px;
+    color: $color-primary;
+    content: "\1F4AC";
+    display: inline-block;
+    font-size: 18px;
+    padding: 5px;
   }
 
 }
 
 .article-sidebar {
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+  border: 1px solid #414141;
   flex: 1 0 auto;
   margin-bottom: 20px;
   padding: 0;
@@ -247,39 +245,38 @@
   width: auto;
 
   &:before {
-      font-size: 8px;
-      margin-right: 10px;
+    font-size: 8px;
+    margin-right: 10px;
   }
 
   &:after {
-      content: attr(title);
-      /* Yes/No label*/
+    content: attr(title);
+    /* Yes/No label*/
   }
 
   &:hover {
-      color: $color-primary;
+    color: $color-primary;
 
-      &:before {
-          color: $color-primary;
-      }
+    &:before {
+      color: #fff;
+    }
 
-      &:after {
-          color: $color-primary;
-      }
-
+    &:after {
+      color: #fff;
+    }
   }
 
   &:focus {
-      background-color: transparent;
-      color: $color-primary;
+    background-color: transparent;
+    color: $color-primary;
   }
 
   &:active {
-      background-color: transparent;
-      color: $color-primary;
+    background-color: transparent;
+    color: $color-primary;
   }
-
 }
+
 .article-vote[aria-selected="true"]::before,
 .article-vote[aria-selected="true"]::after {
   color: $color-text-on-dark;
@@ -308,20 +305,20 @@
   border-top: 1px solid #ddd;
 
   a {
-      color: $color-text-on-light;
-      display: block;
-      padding: 20px 0;
+    color: $color-text-on-light;
+    display: block;
+    padding: 20px 0;
 
-      &:focus,
-      &:hover {
-          text-decoration: none;
-      }
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
 
   }
 
   .icon-arrow-up::before {
-      font-size: 16px;
-      margin-left: 5px;
+    font-size: 16px;
+    margin-left: 5px;
   }
 
 
@@ -345,8 +342,8 @@
   font-weight: 550;
 
   &:hover {
-      background-color: darken($color-primary, 20%);
-      border-color: darken($color-primary, 20%);
+    background-color: darken($color-primary, 20%);
+    border-color: darken($color-primary, 20%);
   }
 
 }
@@ -357,19 +354,25 @@
 }
 
 .sidenav-item {
-  border-radius: 4px;
+  border-left: 4px solid transparent;
   color: $color-text-on-light;
   display: block;
-  margin-bottom: 10px;
   padding: 10px;
+  transition: .2s all ease-in-out;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+  }
+
+  &.current-article {
+    border-left: 4px solid $color-primary;
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+  }
 }
 
-.sidenav-item.current-article, .sidenav-item:hover {
-  background-color: $color-primary;
-  color: $color-text-on-dark;
-  text-decoration: none;
-  font-weight: 550;
-}
+
 
 .recent-articles h3,
 .related-articles h3 {
@@ -399,18 +402,18 @@
   flex: 1 0 auto;
 
   &:nth-child(3n) {
-      padding-right: 0;
+    padding-right: 0;
   }
 
   a {
-      border-bottom: 1px solid #ddd;
-      color: $color-text-on-light;
-      display: block;
-      padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    color: $color-text-on-light;
+    display: block;
+    padding: 15px 0;
   }
 
   &:last-child a {
-      border: 0;
+    border: 0;
   }
 
 }
@@ -439,32 +442,32 @@
   white-space: nowrap;
 
   li {
-      display: inline-block;
+    display: inline-block;
   }
 
   a {
-      border-radius: 50%;
-      display: inline-block;
-      height: 25px;
-      line-height: 25px;
-      overflow: hidden;
-      width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    width: 25px;
+
+    &:before {
+      color: lighten($color-text-on-light, 20%);
+      display: block;
+      font-size: 23px;
+      text-align: center;
+      width: 100%;
+    }
+
+    &:hover {
+      text-decoration: none;
 
       &:before {
-          color: lighten($color-text-on-light, 20%);
-          display: block;
-          font-size: 23px;
-          text-align: center;
-          width: 100%;
+        color: $color-primary;
       }
-
-      &:hover {
-          text-decoration: none;
-
-          &:before {
-              color: $color-primary;
-          }
-      }
+    }
   }
 
 }

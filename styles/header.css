@@ -116,29 +116,30 @@ ul {
   color: inherit; }
 
 .header {
-  max-width: 1160px;
   margin: 0 auto;
   padding: 0 5%;
   position: relative;
   align-items: center;
   display: flex;
-  height: 71px;
+  height: 56px;
   justify-content: space-between; }
+  .header > a:hover {
+    text-decoration: none; }
+  .header .header-left-container {
+    display: flex;
+    align-items: center; }
+    .header .header-left-container img {
+      max-height: 37px; }
+    .header .header-left-container .title {
+      margin-left: 6px;
+      font-size: 28px;
+      color: #414141;
+      margin: 0 8px; }
 
 @media (min-width: 1160px) {
   .header {
     padding: 0;
     width: 90%; } }
-.header-left-container {
-  display: flex;
-  align-items: center; }
-
-.header .title {
-  margin-left: 6px; }
-
-.logo img {
-  max-height: 37px; }
-
 #user-name {
   text-transform: uppercase; }
 

@@ -118,15 +118,31 @@ ul {
 /***** Category pages *****/
 .category-container {
   display: flex;
-  justify-content: flex-end; }
-
-.category-content {
-  flex: 1;
-  color: #008975;
-  font-weight: 500; }
-
-@media (min-width: 1024px) {
-  .category-content {
-    flex: 0 0 80%; } }
+  justify-content: center; }
+  .category-container .category-content {
+    flex: 1;
+    color: #008975;
+    font-weight: 500; }
+    .category-container .category-content .section-tree .section {
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      max-width: 100%; }
+      .category-container .category-content .section-tree .section:not(:last-child) {
+        margin-right: 16px; }
+      .category-container .category-content .section-tree .section .section-tree-title {
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 8px; }
+      .category-container .category-content .section-tree .section .article-list-item {
+        padding: 12px 8px; }
+      .category-container .category-content .section-tree .section > a {
+        padding: 12px 8px; }
+  @media (min-width: 1024px) {
+    .category-container .category-content {
+      flex: 0 0 80%; } }
 
 /*# sourceMappingURL=category.css.map */

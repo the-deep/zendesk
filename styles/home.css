@@ -115,7 +115,10 @@ ul {
 .dropdown-toggle::after {
   color: inherit; }
 
-.blocks-list {
+h1 {
+  text-align: center; }
+
+.blocks .blocks-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -184,109 +187,121 @@ ul {
 /***** Homepage *****/
 .section {
   margin-bottom: 40px; }
+  .section h2 {
+    margin-bottom: 10px;
+    text-align: center; }
+  @media (min-width: 768px) {
+    .section {
+      margin-bottom: 60px; } }
 
-@media (min-width: 768px) {
-  .section {
-    margin-bottom: 60px; } }
-.section h2 {
-  margin-bottom: 10px;
-  text-align: center; }
+.bottom-container {
+  display: flex;
+  width: 100%;
+  /***** Recent activity *****/ }
+  .bottom-container .articles-home {
+    display: flex;
+    flex-direction: column; }
+    .bottom-container .articles-home h1 {
+      margin-bottom: 0; }
+    .bottom-container .articles-home .promoted-articles-home {
+      display: flex;
+      flex-direction: column; }
+      .bottom-container .articles-home .promoted-articles-home .promoted-articles-item-home {
+        width: 100%; }
+        .bottom-container .articles-home .promoted-articles-home .promoted-articles-item-home a {
+          border-bottom: 1px solid #ddd;
+          color: rgba(0, 0, 0, 0.8);
+          display: block;
+          padding: 15px 0; }
+        .bottom-container .articles-home .promoted-articles-home .promoted-articles-item-home:last-child a {
+          border: 0; }
+  .bottom-container .articles-home,
+  .bottom-container .activity {
+    flex-grow: 1;
+    padding: 30px 0;
+    padding-right: 48px; }
+    .bottom-container .articles-home:last-child,
+    .bottom-container .activity:last-child {
+      padding-right: 0; }
+  @media (max-width: 768px) {
+    .bottom-container {
+      flex-direction: column; }
+      .bottom-container .articles-home {
+        padding-right: 0; } }
+  .bottom-container .recent-activity-header {
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 32px; }
+  .bottom-container .recent-activity-list {
+    padding: 0; }
+  .bottom-container .recent-activity-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0; }
+  .bottom-container .recent-activity-item-parent {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #1676d3;
+    display: inline-block;
+    width: 100%; }
+  @media (min-width: 768px) {
+    .bottom-container .recent-activity-item-parent,
+    .bottom-container .recent-activity-item-link {
+      width: 70%;
+      margin: 0; } }
+  .bottom-container .recent-activity-item-link {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 6px 0;
+    color: #1676d3;
+    display: inline-block;
+    width: 100%; }
+  .bottom-container .recent-activity-item-meta {
+    margin: 15px 0 0 0;
+    float: none; }
+  @media (min-width: 768px) {
+    .bottom-container .recent-activity-item-meta {
+      margin: 0;
+      float: right; }
+    .bottom-container [dir="rtl"] .recent-activity-item-meta {
+      float: left; } }
+  .bottom-container .recent-activity-item-time {
+    color: rgba(51, 51, 51, 0.8);
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 300; }
+  .bottom-container .recent-activity-item-comment {
+    padding-left: 5px;
+    color: rgba(51, 51, 51, 0.8);
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 300; }
+    .bottom-container .recent-activity-item-comment:before {
+      display: inline-block; }
+    .bottom-container .recent-activity-item-comment span::before {
+      color: #008975;
+      content: "\1F4AC";
+      display: inline-block;
+      font-size: 15px;
+      padding-right: 3px;
+      vertical-align: middle; }
+  .bottom-container [dir="rtl"] .recent-activity-item-comment {
+    padding: 0 5px 0 0; }
+  .bottom-container [dir="rtl"] .recent-activity-item-comment span::before {
+    padding-left: 3px; }
+  .bottom-container .recent-activity-controls {
+    padding-top: 15px; }
 
 /***** Community section in homepage *****/
 .community {
   text-align: center; }
-  .community h2 {
-    text-transform: uppercase;
-    font-weight: 500;
-    color: #008975; }
-
-.community-image {
-  min-height: 300px;
-  background-image: url("../settings/community_image.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  max-width: 100%; }
-
-.community,
-.activity {
-  border-top: 1px solid #ddd;
-  padding: 30px 0; }
-
-/***** Recent activity *****/
-.recent-activity-header {
-  margin-bottom: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: #008975; }
-
-.recent-activity-list {
-  padding: 0; }
-
-.recent-activity-item {
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0; }
-
-.recent-activity-item-parent {
-  margin: 6px 0;
-  font-size: 16px;
-  color: #1676d3;
-  display: inline-block;
-  width: 100%; }
-
-@media (min-width: 768px) {
-  .recent-activity-item-parent,
-  .recent-activity-item-link {
-    width: 70%;
-    margin: 0; } }
-.recent-activity-item-link {
-  font-size: 14px;
-  font-weight: 300;
-  margin: 6px 0;
-  color: #1676d3;
-  display: inline-block;
-  width: 100%; }
-
-.recent-activity-item-meta {
-  margin: 15px 0 0 0;
-  float: none; }
-
-@media (min-width: 768px) {
-  .recent-activity-item-meta {
-    margin: 0;
-    float: right; }
-
-  [dir="rtl"] .recent-activity-item-meta {
-    float: left; } }
-.recent-activity-item-time {
-  color: rgba(51, 51, 51, 0.8);
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 300; }
-
-.recent-activity-item-comment {
-  padding-left: 5px;
-  color: rgba(51, 51, 51, 0.8);
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 300; }
-  .recent-activity-item-comment:before {
-    display: inline-block; }
-  .recent-activity-item-comment span::before {
-    color: #008975;
-    content: "\1F4AC";
-    display: inline-block;
-    font-size: 15px;
-    padding-right: 3px;
-    vertical-align: middle; }
-
-[dir="rtl"] .recent-activity-item-comment {
-  padding: 0 5px 0 0; }
-
-[dir="rtl"] .recent-activity-item-comment span::before {
-  padding-left: 3px; }
-
-.recent-activity-controls {
-  padding-top: 15px; }
+  .community .community-image {
+    min-height: 300px;
+    height: 300px;
+    background-image: url("../settings/community_image.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%; }
 
 /*# sourceMappingURL=home.css.map */
