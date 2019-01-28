@@ -129,7 +129,7 @@ h1 {
   .blocks-list {
     margin: 0 -15px; } }
 .blocks-item {
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid #008975;
   border-radius: 4px;
   box-sizing: border-box;
   color: rgba(0, 0, 0, 0.8);
@@ -139,15 +139,18 @@ h1 {
   justify-content: center;
   margin: 0 0 30px;
   max-width: 100%;
-  text-align: center; }
+  text-align: center;
+  height: 20vh; }
   .blocks-item:hover, .blocks-item:active, .blocks-item:focus {
     text-decoration: none;
-    transform: translateY(-1px);
+    transform: translateY(-5px);
     transition: .2s all ease-in-out;
-    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.3); }
     .blocks-item:hover *, .blocks-item:active *, .blocks-item:focus * {
       background-color: inherit;
       color: inherit; }
+    .blocks-item:hover .blocks-item-title, .blocks-item:active .blocks-item-title, .blocks-item:focus .blocks-item-title {
+      color: #008975; }
 
 @media (min-width: 768px) {
   .blocks-item {
@@ -166,6 +169,7 @@ h1 {
 
 .blocks-item-title {
   font-weight: 600;
+  font-size: 24px;
   margin-bottom: 0;
   text-transform: capitalize; }
 

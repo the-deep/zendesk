@@ -24,6 +24,7 @@
         color: #fff!important;
         font-size: 56px;
         margin-bottom: 0;
+        padding: 16px;
 
         .focus {
           font-weight: 600;
@@ -32,10 +33,10 @@
 
       .sub-heading {
         color: #fff!important;
+        padding: 16px;
       }
 
       .search {
-        width: 480px;
       }
 
       @media (max-width: 768px) {

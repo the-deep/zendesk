@@ -135,13 +135,13 @@ ul {
       .hero .hero-inner .left-container .heading {
         color: #fff !important;
         font-size: 56px;
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        padding: 16px; }
         .hero .hero-inner .left-container .heading .focus {
           font-weight: 600; }
       .hero .hero-inner .left-container .sub-heading {
-        color: #fff !important; }
-      .hero .hero-inner .left-container .search {
-        width: 480px; }
+        color: #fff !important;
+        padding: 16px; }
       @media (max-width: 768px) {
         .hero .hero-inner .left-container .heading {
           font-size: 32px; }
